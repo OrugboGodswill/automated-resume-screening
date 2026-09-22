@@ -1,65 +1,24 @@
-# Python Virtual Environments & Packages
-.venv/
-venv/
-ENV/
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Byte-compiled / optimized files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Pytest / Coverage
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-
-# IDE & Editor Settings
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Environment Variables & Secrets
-.env
-.env*.local
-.streamlit/secrets.toml
-
-# Node & Next.js leftovers (if present)
-node_modules/
-.next/
-.vercel/
+# v0 sandbox internal files
 __v0_runtime_loader.js
 __v0_devtools.tsx
 __v0_jsx-dev-runtime.ts
 .snowflake/
 .v0-trash/
+.vercel/
 
-# OS Artifacts
+# Environment variables
+.env
+.env*.local
+
+# Node & Build ignores
+node_modules/
+.next/
 .DS_Store
-Thumbs.db
 
-# Logs
-*.log
+# Python ignores
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.vscode/

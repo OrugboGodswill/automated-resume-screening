@@ -5,12 +5,9 @@ scikit-learn>=1.5
 joblib>=1.4
 pypdf>=4.3
 pypdfium2>=4.30
-winocr>=0.0.15; sys_platform == 'win32'
-pytesseract>=0.3.10
+winocr>=0.0.15
 plotly>=5.23
 nltk>=3.9
 openpyxl>=3.1
 pytest>=8.3
-
-
 
