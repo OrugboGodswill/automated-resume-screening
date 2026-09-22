@@ -1,0 +1,66 @@
+{
+  "programming_languages": [
+    "python", "java", "javascript", "typescript", "c++", "c#", "r", "go", "golang", "rust", "php", "ruby", "swift", "kotlin", "scala", "dart"
+  ],
+  "web_development_react": [
+    "react", "react.js", "react native", "redux", "next.js", "vue", "vue.js", "angular", "html", "html5", "css", "css3", "tailwind", "sass", "bootstrap", "rest api", "graphql", "webpack", "vite", "nodejs", "node.js", "express.js"
+  ],
+  "database_sql": [
+    "sql", "mysql", "postgresql", "oracle", "sql server", "t-sql", "pl/sql", "mongodb", "redis", "elasticsearch", "sqlite", "cassandra", "dynamodb", "database design", "query optimization", "indexing", "stored procedures", "triggers", "ssms", "ssis", "etl"
+  ],
+  "data_analytics_science": [
+    "data analysis", "data science", "pandas", "numpy", "scipy", "statistics", "statistical analysis", "tableau", "power bi", "excel", "data visualization", "exploratory data analysis", "business intelligence", "bi", "looker", "dax", "qlik", "google analytics", "data cleaning"
+  ],
+  "machine_learning_ai": [
+    "machine learning", "deep learning", "natural language processing", "nlp", "computer vision", "tensorflow", "pytorch", "keras", "scikit-learn", "hugging face", "transformers", "llm", "large language models", "prompt engineering", "langchain", "mlops", "model deployment", "neural networks", "feature engineering", "mlflow", "opencv"
+  ],
+  "cloud_devops": [
+    "aws", "azure", "gcp", "docker", "kubernetes", "linux", "git", "github", "gitlab", "ci/cd", "terraform", "ansible", "jenkins", "helm", "bash", "cloud computing", "microservices", "nginx"
+  ],
+  "network_cybersecurity": [
+    "cybersecurity", "network security", "firewall", "firewalls", "cisco", "ccna", "ccnp", "cissp", "wireshark", "penetration testing", "ethical hacking", "vulnerability assessment", "siem", "soc", "ids/ips", "vpn", "tcp/ip", "dns", "dhcp", "cryptography", "owasp", "incident response", "endpoint security"
+  ],
+  "information_technology_sysadmin": [
+    "information technology", "system administration", "network administration", "active directory", "windows server", "itil", "helpdesk", "technical support", "desktop support", "office 365", "vmware", "virtualization", "lan/wan", "disaster recovery", "backup management"
+  ],
+  "blockchain_web3": [
+    "blockchain", "smart contracts", "solidity", "web3", "ethereum", "hyperledger", "dapps", "defi", "cryptography", "tokenomics", "truffle", "hardhat", "consensus algorithms", "metamask", "erc-20", "nft"
+  ],
+  "civil_engineering": [
+    "civil engineering", "autocad", "staad pro", "revit", "surveying", "total station", "structural analysis", "concrete design", "steel design", "construction management", "site supervision", "estimation", "bill of quantities", "boq", "geotechnical", "highway engineering", "hydraulics"
+  ],
+  "mechanical_engineering": [
+    "mechanical engineering", "solidworks", "catia", "autocad mechanical", "ansys", "finite element analysis", "fea", "computational fluid dynamics", "cfd", "thermodynamics", "fluid mechanics", "heat transfer", "gd&t", "3d modeling", "cnc", "manufacturing processes", "cad/cam", "hvac"
+  ],
+  "electrical_engineering": [
+    "electrical engineering", "circuit design", "pcb design", "matlab", "simulink", "plc", "scada", "power systems", "microcontrollers", "embedded systems", "arduino", "automation", "instrumentation", "control systems", "vlsi", "fpga"
+  ],
+  "automobile_automotive": [
+    "automotive", "automobile engineering", "engine diagnostics", "obd-ii", "engine repair", "transmission", "brake systems", "automotive electrical", "suspension", "ecu tuning", "hybrid vehicles", "electric vehicles", "ev technology", "scan tools", "powertrain", "chassis"
+  ],
+  "aviation_aerospace": [
+    "aviation", "avionics", "aircraft maintenance", "flight operations", "flight planning", "faa regulations", "aerodynamics", "air traffic control", "aircraft systems", "navigation systems", "boeing", "airbus", "propulsion", "safety management systems"
+  ],
+  "digital_media_design": [
+    "ui/ux", "user experience", "user interface", "figma", "adobe xd", "wireframing", "prototyping", "photoshop", "illustrator", "indesign", "after effects", "premiere pro", "video editing", "graphic design", "web design", "typography", "brand identity", "motion graphics", "canva"
+  ],
+  "accounting_finance": [
+    "accounting", "financial analysis", "financial reporting", "gaap", "ifrs", "general ledger", "balance sheet", "income statement", "accounts payable", "accounts receivable", "bank reconciliation", "auditing", "taxation", "tax compliance", "quickbooks", "sap fico", "payroll", "budgeting", "forecasting"
+  ],
+  "operations_supply_chain": [
+    "operations management", "supply chain", "supply chain management", "logistics", "procurement", "inventory management", "lean manufacturing", "six sigma", "process improvement", "quality assurance", "vendor management", "erp", "sap", "warehouse management", "root cause analysis", "kaizen"
+  ],
+  "trades_plumbing_construction": [
+    "plumbing", "pipefitting", "drain cleaning", "leak detection", "soldering", "brazing", "water heater", "copper piping", "pvc", "pex", "backflow prevention", "blueprint reading", "plumbing code", "rough-in", "fixture installation", "sewer lines", "gas piping", "drainage systems", "pipe threading", "valve repair"
+  ],
+  "business_management": [
+    "project management", "agile", "scrum", "kanban", "product management", "stakeholder management", "leadership", "risk management", "business analysis", "strategic planning", "change management", "kpi tracking", "crm"
+  ],
+  "qualifications": [
+    "bachelor", "master", "phd", "doctorate", "bsc", "msc", "b.tech", "m.tech", "b.eng", "m.eng", "bba", "mba", "diploma", "associate degree", "degree",
+    "certification", "certified", "license", "licensure",
+    "pmp", "cpa", "acca", "cfa", "cissp", "ccna", "ccnp", "comptia", "comptia security+", "aws certified", "azure certified",
+    "pe", "professional engineer", "ase", "ase certified", "osha", "journeyman", "master plumber", "apprentice", "plumbing license",
+    "a&p license", "faa license", "pilot license", "commercial pilot", "six sigma green belt", "six sigma black belt", "scrum master", "csm"
+  ]
+}
