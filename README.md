@@ -13,7 +13,7 @@
 
 **Talent Lens** is an enterprise-grade decision support platform engineered for competency-focused resume screening and applicant ranking. Modern talent acquisition faces critical bottlenecks: processing thousands of unstructured PDF resumes while maintaining objectivity, compliance, and speed.
 
-Talent Lens solves this challenge by pairing multi-engine Document Ingestion (featuring PDF text extraction and fallback Tesseract/Windows OCR) with transparent Feature Engineering and Supervised Machine Learning. Rather than relying on black-box heuristics, Talent Lens quantifies candidate-job alignment using skill coverage ratios, TF-IDF cosine similarity, Jaccard distance, experience extraction, and education matching.
+Talent Lens solves this challenge by pairing multi-engine Document Ingestion (featuring PDF text extraction and fallback Tesseract OCR) with transparent Feature Engineering and Supervised Machine Learning. Rather than relying on black-box heuristics, Talent Lens quantifies candidate-job alignment using skill coverage ratios, TF-IDF cosine similarity, Jaccard distance, experience extraction, and education matching.
 
 > [!IMPORTANT]
 > **Responsible AI Commitment**: Talent Lens functions purely as an **objective decision-support tool** for human recruitment specialists. It explicitly avoids using demographic attributes or proxies for protected characteristics. Final employment decisions must remain under human oversight.
@@ -29,7 +29,7 @@ flowchart TD
     subgraph Ingestion ["1. Document Ingestion"]
         A[Candidate PDF Upload] --> B{pypdf Text Extraction}
         B -- Native Text Found --> D[Raw Resume Text]
-        B -- Scanned / Image PDF --> C[OCR Engine\nwinocr / Tesseract]
+        B -- Scanned / Image PDF --> C[OCR Engine\nTesseract OCR]
         C --> D
     end
 
@@ -117,7 +117,7 @@ flowchart TD
 - **Language**: Python 3.10+
 - **Frontend / Dashboard**: [Streamlit 1.37+](https://streamlit.io)
 - **Machine Learning**: [Scikit-Learn 1.5+](https://scikit-learn.org), `joblib`, `numpy`, `pandas`
-- **Document Parsing & OCR**: `pypdf`, `pypdfium2`, `pytesseract` (Tesseract OCR), `winocr` (Windows)
+- **Document Parsing & OCR**: `pypdf`, `pypdfium2`, `pytesseract` (Tesseract OCR), `Pillow`
 - **Data Visualization**: `plotly`, `matplotlib`
 - **NLP Utilities**: `nltk` (tokenization, stop words, lemmatization)
 
@@ -126,7 +126,7 @@ flowchart TD
 - **Tesseract OCR**: Recommended for image-only/scanned PDF processing.
   - Linux: `sudo apt-get install tesseract-ocr`
   - macOS: `brew install tesseract`
-  - Windows: Included natively via `winocr` or install standard [Tesseract executable](https://github.com/UB-Mannheim/tesseract/wiki).
+  - Windows: Install standard [Tesseract executable](https://github.com/UB-Mannheim/tesseract/wiki).
 
 ---
 
