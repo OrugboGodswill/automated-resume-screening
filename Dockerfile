@@ -34,12 +34,12 @@ COPY . .
 # Ensure trained model directory exists and train baseline model if missing
 RUN python -c "from resume_screening.model import ensure_model; ensure_model()"
 
-# Expose Streamlit default port
-EXPOSE 8501
+# Expose Render's required public port
+EXPOSE 10000
 
 # Healthcheck configuration
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD curl --fail http://localhost:8501/_stcore/health || exit 1
+  CMD curl --fail http://localhost:10000/_stcore/health || exit 1
 
 # Command to launch Streamlit app
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app.py", "--server.port=10000", "--server.address=0.0.0.0"]

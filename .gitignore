@@ -22,3 +22,7 @@ __pycache__/
 venv/
 .pytest_cache/
 .vscode/
+
+# Trained ML model files — rebuilt at Docker build time via ensure_model()
+models/*.joblib
+models/*.pkl
