@@ -3,22 +3,38 @@ from pathlib import Path
 
 from pypdf import PdfReader
 
-
 import os
 import shutil
 
+
+def _ocr_available() -> bool:
+    """Return True only when both pytesseract and the Tesseract binary are present."""
+    try:
+        import pytesseract  # noqa: F401
+
+        # Check system PATH first, then the common Windows install location
+        if shutil.which("tesseract"):
+            return True
+        win_path = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        if os.path.exists(win_path):
+            import pytesseract as pt
+            pt.pytesseract.tesseract_cmd = win_path
+            return True
+    except ImportError:
+        pass
+    return False
+
+
 def _ocr_pdf_bytes(pdf_bytes: bytes) -> str:
-    """Extract text from scanned PDF pages using Tesseract OCR."""
+    """Extract text from scanned PDF pages using Tesseract OCR (Windows / Docker only)."""
+    if not _ocr_available():
+        return ""
+
     text_chunks = []
     try:
         import pypdfium2 as pdfium
         import pytesseract
-        from PIL import Image
-
-        if not shutil.which("tesseract"):
-            win_tesseract = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-            if os.path.exists(win_tesseract):
-                pytesseract.pytesseract.tesseract_cmd = win_tesseract
+        from PIL import Image  # noqa: F401
 
         pdf = pdfium.PdfDocument(pdf_bytes)
         for page in pdf:
@@ -32,8 +48,6 @@ def _ocr_pdf_bytes(pdf_bytes: bytes) -> str:
         pass
 
     return ""
-
-
 
 
 def extract_pdf_text(source: bytes | str | Path) -> str:
@@ -50,7 +64,7 @@ def extract_pdf_text(source: bytes | str | Path) -> str:
     except Exception:
         text = ""
 
-    # If the PDF is scanned or image-only, extract_text returns empty or negligible text
+    # If the PDF is scanned or image-only, attempt OCR (only works where Tesseract is installed)
     if len(text.strip()) < 30:
         ocr_text = _ocr_pdf_bytes(raw_bytes)
         if len(ocr_text) > len(text):
@@ -61,4 +75,3 @@ def extract_pdf_text(source: bytes | str | Path) -> str:
 
 def extract_text_from_upload(uploaded_file) -> str:
     return extract_pdf_text(uploaded_file.getvalue())
-

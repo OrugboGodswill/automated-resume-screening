@@ -254,8 +254,11 @@ with setup:
             for upload in uploads:
                 try:
                     text = extract_text_from_upload(upload)
+                    if len(text.strip()) < 30:
+                        st.warning(f"⚠️ **{upload.name}** — could not extract text. This PDF appears to be a scanned image. Please upload a text-based PDF (created in Word, Google Docs, etc.).")
+                        continue
                     rows.append(screen_resume(upload.name, text, job_text, bundle))
-                    st.write(f"Processed {upload.name}")
+                    st.write(f"✅ Processed {upload.name}")
                 except Exception as exc:
                     st.warning(f"Could not process {upload.name}: {exc}")
             st.session_state.results = rank_candidates(rows) if rows else None
