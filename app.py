@@ -1,6 +1,11 @@
 from __future__ import annotations
 
 import io
+import nltk
+
+# Download required NLTK data on first run (no-op if already cached)
+for _corpus in ("punkt", "punkt_tab", "stopwords", "wordnet"):
+    nltk.download(_corpus, quiet=True)
 
 import pandas as pd
 import plotly.express as px
